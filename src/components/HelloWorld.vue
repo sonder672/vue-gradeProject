@@ -1,8 +1,8 @@
 <template>
-  <v-container>
+  <v-card elevation="24" max-width="450" class="text-right">
     <v-carousel
       cycle
-      height="400"
+      height="450"
       hide-delimiter-background
       show-arrows-on-hover
     >
@@ -14,7 +14,7 @@
         </v-sheet>
       </v-carousel-item>
     </v-carousel>
-  </v-container>
+  </v-card>
 </template>
 
 <script>
