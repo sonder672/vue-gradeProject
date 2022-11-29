@@ -1,85 +1,128 @@
 <template>
-  <div style="padding-top: 5em">
-    <v-container fluid>
-      <v-row style="background-color: #ecfffe">
-        <v-col cols="6" style="padding-top: 10%">
-          <v-card class="mx-auto" max-width="90%">
+  <div>
+    <v-container>
+      <v-row justify="space-around" id="sizeByRowCol">
+        <v-col cols="12">
+          <v-img :src="imageHome" height="100%"></v-img>
+        </v-col>
+        <v-col cols="12" md="4" lg="4" xl="4" sm="12">
+          <v-card width="100%">
+            <v-img height="50%" :src="require('../assets/guia1.png')">
+              <v-app-bar flat color="rgba(0, 0, 0, 0)">
+                <v-app-bar-nav-icon color="white"></v-app-bar-nav-icon>
+
+                <v-spacer></v-spacer>
+
+                <v-btn color="white" icon>
+                  <v-icon>mdi-dots-vertical</v-icon>
+                </v-btn>
+              </v-app-bar>
+            </v-img>
+
             <v-card-text>
-              <p
-                class="text-h4 text--primary text-center"
-                style="font-size: 50%"
-              >
-                DISEÑA TU CAMISETA PERSONALIZADA
-              </p>
-              <div class="text--primary">
-                Puedes escoger agregar los logotipos y textos que tú quieras,
-                con la gama de colores que hay disponible para las camisetas.
-                <span class="font-weight-bold"
-                  >El límite es tu creatividad, ¿te atreves?</span
-                >
-              </div>
+              <div class="font-weight-bold ml-8 mb-2">Creación</div>
+
+              <v-timeline align-top dense>
+                <v-timeline-item small color="blue lighten-1">
+                  <div>
+                    <div class="font-weight-normal">
+                      <strong>Escoge el color</strong>
+                    </div>
+                    <div>
+                      Puedes elegir entre la variedad de colores que hay
+                    </div>
+                  </div>
+                </v-timeline-item>
+              </v-timeline>
             </v-card-text>
           </v-card>
         </v-col>
-        <v-col cols="6">
-          <v-img
-            contain
-            height="100%"
-            width="100%"
-            :src="require('../assets/imginicio.png')"
-          />
+
+        <v-col cols="12" md="4" lg="4" xl="4" sm="12">
+          <v-card width="100%">
+            <v-img height="50%" :src="require('../assets/guia2.png')">
+              <v-app-bar flat color="rgba(0, 0, 0, 0)">
+                <v-app-bar-nav-icon color="white"></v-app-bar-nav-icon>
+
+                <v-spacer></v-spacer>
+
+                <v-btn color="white" icon>
+                  <v-icon>mdi-dots-vertical</v-icon>
+                </v-btn>
+              </v-app-bar>
+            </v-img>
+
+            <v-card-text>
+              <div class="font-weight-bold ml-8 mb-2">Proceso</div>
+
+              <v-timeline align-top dense>
+                <v-timeline-item small color="blue darken-3">
+                  <div>
+                    <div class="font-weight-normal">
+                      <strong>Sube tus logos</strong>
+                    </div>
+                    <div>
+                      Sube cualquier imagen o texto y posicionala dentro de la
+                      prenda
+                    </div>
+                  </div>
+                </v-timeline-item>
+              </v-timeline>
+            </v-card-text>
+          </v-card>
+        </v-col>
+
+        <v-col cols="12" md="4" lg="4" xl="4" sm="12">
+          <v-card width="100%">
+            <v-img height="50%" :src="require('../assets/guia3.png')">
+              <v-app-bar flat color="rgba(0, 0, 0, 0)">
+                <v-app-bar-nav-icon color="white"></v-app-bar-nav-icon>
+
+                <v-spacer></v-spacer>
+
+                <v-btn color="white" icon>
+                  <v-icon>mdi-dots-vertical</v-icon>
+                </v-btn>
+              </v-app-bar>
+            </v-img>
+
+            <v-card-text>
+              <div class="font-weight-bold ml-8 mb-2">Finalización</div>
+
+              <v-timeline align-top dense>
+                <v-timeline-item small color="blue darken-4">
+                  <div>
+                    <div class="font-weight-normal">
+                      <strong>Guarda tu creación</strong>
+                    </div>
+                    <div>
+                      Una vez satisfecho, puedes guardar tu personalización
+                    </div>
+                  </div>
+                </v-timeline-item>
+              </v-timeline>
+            </v-card-text>
+          </v-card>
         </v-col>
       </v-row>
     </v-container>
-
-    <template>
-      <div style="padding-top: 5em">
-        <h1 class="text-center">¿Cómo personalizar tu camiseta?</h1>
-      </div>
-
-      <v-container>
-        <div>
-          <v-stepper alt-labels align>
-            <v-stepper-header>
-              <v-stepper-step complete alt-labels step="1">
-                Selecciona entre los colores disponibles
-              </v-stepper-step>
-
-              <v-divider></v-divider>
-
-              <v-stepper-step complete alt-labels step="2">
-                Sube y posiciona la imagen o el texto que quieras
-              </v-stepper-step>
-
-              <v-divider></v-divider>
-
-              <v-stepper-step complete alt-labels step="3">
-                Guarda y envía el pedido
-              </v-stepper-step>
-            </v-stepper-header>
-          </v-stepper>
-        </div>
-        <v-row>
-          <v-col cols="4"
-            ><v-img
-              width="100%"
-              height="100%"
-              :src="require('../assets/guia1.png')"
-          /></v-col>
-          <v-col cols="4"
-            ><v-img
-              width="100%"
-              height="100%"
-              :src="require('../assets/guia2.png')"
-          /></v-col>
-          <v-col cols="4"
-            ><v-img
-              width="100%"
-              height="100%"
-              :src="require('../assets/guia3.png')"
-          /></v-col>
-        </v-row>
-      </v-container>
-    </template>
   </div>
 </template>
+
+<script>
+export default {
+  mounted() {
+    const sizeByRow = document.getElementById("sizeByRowCol");
+    console.log(sizeByRow.offsetWidth);
+    if (sizeByRow.offsetWidth < 899) {
+      console.log("verdad");
+      this.imageHome = require("../assets/imginicioMobile.png");
+    }
+  },
+  data() {
+    return {
+      imageHome: require("../assets/imginicioLogo.png"),
+    };
+  },
+};
+</script>

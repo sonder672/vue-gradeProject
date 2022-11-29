@@ -1,6 +1,5 @@
 <template>
   <div>
-    <h1 class="text-center">Productos</h1>
     <product-list />
   </div>
 </template>

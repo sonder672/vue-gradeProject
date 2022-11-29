@@ -1,5 +1,5 @@
 <template>
-  <v-container class="fill-height" style="padding-top: 5em" fluid>
+  <v-container class="fill-height" style="padding-top: 1em" fluid>
     <v-row align="center" justify="center" dense>
       <v-col cols="12" sm="8" md="4" lg="4">
         <v-card elevation="0">

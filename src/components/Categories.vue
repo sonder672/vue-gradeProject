@@ -1,5 +1,6 @@
 <template>
-  <div style="padding-top: 5em">
+  <div style="padding-top: 1em">
+    <h1 class="text-center">Categorías</h1>
     <v-container>
       <v-row align="start" no-gutters>
         <v-col

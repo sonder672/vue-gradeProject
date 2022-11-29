@@ -1,6 +1,5 @@
 <template>
   <div>
-    <h1 class="text-center">Categorías</h1>
     <category-list :categories="categories" />
   </div>
 </template>

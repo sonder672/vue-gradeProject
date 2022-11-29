@@ -1,5 +1,6 @@
 <template>
-  <div style="padding-top: 5em">
+  <div style="padding-top: 1em">
+    <h1 class="text-center">Productos</h1>
     <v-container class="fill-height" fluid>
       <v-row align="center" justify="center" dense>
         <v-col

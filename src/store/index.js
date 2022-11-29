@@ -72,6 +72,10 @@ export default new Vuex.Store({
     loggingChange(state, loggingStatus) {
       state.logging = loggingStatus;
     },
+    loggingChangeWithCustomization(state, loggingStatusAndCustomization) {
+      state.logging = loggingStatusAndCustomization.loggingStatus;
+      state.productCustom = loggingStatusAndCustomization.listCustomization;
+    },
     getListCustomization(state, listCustomization) {
       state.productCustom = listCustomization;
     },

@@ -1,5 +1,5 @@
 <template>
-  <div style="padding-top: 10em">
+  <div style="padding-top: 2em">
     <v-container class="lighten-5">
       <v-row align="center" justify="center" dense id="sizeRowConva">
         <v-col

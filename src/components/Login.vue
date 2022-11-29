@@ -1,5 +1,5 @@
 <template>
-  <div style="padding-top: 5em">
+  <div style="padding-top: 1em">
     <v-container class="fill-height" fluid>
       <v-row align="center" justify="center" dense>
         <v-col cols="12" sm="8" md="4" lg="4">
@@ -126,9 +126,34 @@ export default {
           showConfirmButton: false,
           timer: 1500,
         });
+
+        const settingsCustom = {
+          method: "POST",
+          body: JSON.stringify({
+            uuid: sessionStorage.getItem("uuid"),
+          }),
+          headers: {
+            "Content-type": "application/json",
+          },
+        };
+
+        const urlCustom = `${process.env.VUE_APP_API_BACKEND}/customization/user`;
+
+        const dataReturnedCustom = await fetch(urlCustom, settingsCustom);
+        const userAccessCustom = await dataReturnedCustom.json();
+        if (
+          dataReturnedCustom.status >= 400 &&
+          dataReturnedCustom.status < 600
+        ) {
+          throw new Error(userAccessCustom.message);
+        }
+
         this.disabledBtnLogin = false;
         this.$router.push("/categoria");
-        this.$store.commit("loggingChange", true);
+        this.$store.commit("loggingChangeWithCustomization", {
+          loggingStatus: true,
+          listCustomization: userAccessCustom,
+        });
       } catch (error) {
         this.$swal({
           position: "center",
