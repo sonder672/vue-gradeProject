@@ -18,7 +18,7 @@ export default {
   },
   data() {
     return {
-      categories: [],
+      categories: "",
     };
   },
   methods: {
@@ -27,9 +27,10 @@ export default {
         const settings = {
           method: "GET",
         };
-        const url = "http://localhost:1234/api/product";
+        const url = `${process.env.VUE_APP_API_BACKEND}/category`;
         const dataReturned = await fetch(url, settings);
         const categoriesInJson = await dataReturned.json();
+
         this.categories = categoriesInJson;
       } catch (error) {
         console.log({ error });
